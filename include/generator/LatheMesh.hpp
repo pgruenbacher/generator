@@ -25,6 +25,18 @@ namespace generator {
 /// the axis counterclockwise.
 template <typename Shape>
 class LatheMesh {
+
+private:
+
+	gml::dvec3 axis_;
+
+	Shape shape_;
+
+	int slices_;
+
+	double start_;
+
+	double sweep_;
 public:
 
 	class Triangles {
@@ -158,17 +170,7 @@ public:
 
 	Vertices vertices() const noexcept { return *this; }
 
-private:
 
-	gml::dvec3 axis_;
-
-	Shape shape_;
-
-	int slices_;
-
-	double start_;
-
-	double sweep_;
 
 };
 

@@ -24,6 +24,13 @@ namespace generator {
 /// u-texture coordinate is taken from the shape and v from the path.
 template <typename Shape, typename Path>
 class ExtrudeMesh {
+private:
+
+	Shape shape_;
+
+	Path path_;
+
+	int shapeVertexCount_;
 public:
 
 	class Triangles {
@@ -155,13 +162,6 @@ public:
 		shapeVertexCount_{count(shape_.vertices())}
 	{ }
 
-private:
-
-	Shape shape_;
-
-	Path path_;
-
-	int shapeVertexCount_;
 
 };
 
